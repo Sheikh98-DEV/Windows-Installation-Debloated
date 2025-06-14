@@ -3,7 +3,7 @@
 # ***                                                   ***
 # ***  Windows 11 Image Cleaner Script by S.H.E.I.K.H   ***
 # ***                                                   ***
-# ***         Version 1.0.0 (Update 6/12/2025)          ***
+# ***         Version 1.0.0 (Update 6/14/2025)          ***
 # ***                                                   ***
 # ***            Based on Tiny11 by NTDEV               ***
 # ***                                                   ***
