@@ -3,7 +3,7 @@
 # ***                                                   ***
 # ***  Windows 11 Image Cleaner Script by S.H.E.I.K.H   ***
 # ***                                                   ***
-# ***         Version 1.0.0 (Update 6/14/2025)          ***
+# ***     Version 2.0.0 (Update 6/20/2025) - Stable     ***
 # ***                                                   ***
 # ***            Based on Tiny11 by NTDEV               ***
 # ***                                                   ***
@@ -203,22 +203,22 @@ Write-Host "Removing system packages..."
 Start-Sleep -Seconds 1
 
 $packagePatterns = @(
-    "Windows-Defender-Client-Package~31bf3856ad364e35~"
-	##### Uncomment each pack you want to remove and add a comma after defender package name above
-	#"Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-Kernel-LA57-FoD-Package~31bf3856ad364e35~amd64",
-    #"Microsoft-Windows-LanguageFeatures-Handwriting-$languageCode-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-LanguageFeatures-OCR-$languageCode-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-LanguageFeatures-Speech-$languageCode-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-LanguageFeatures-TextToSpeech-$languageCode-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-Wallpaper-Content-Extended-FoD-Package~31bf3856ad364e35",
-    #"Microsoft-Windows-WordPad-FoD-Package~",
-    #"Microsoft-Windows-TabletPCMath-Package~",
-    #"Microsoft-Windows-StepsRecorder-Package~"
+	### Uncomment Defender pack to remove defender but you will lose Windows Update
+    #"Windows-Defender-Client-Package~31bf3856ad364e35~",
+	"Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35",
+    "Microsoft-Windows-Kernel-LA57-FoD-Package~31bf3856ad364e35~amd64",
+    "Microsoft-Windows-LanguageFeatures-Handwriting-$languageCode-Package~31bf3856ad364e35",
+    "Microsoft-Windows-LanguageFeatures-OCR-$languageCode-Package~31bf3856ad364e35",
+    "Microsoft-Windows-LanguageFeatures-Speech-$languageCode-Package~31bf3856ad364e35",
+    "Microsoft-Windows-LanguageFeatures-TextToSpeech-$languageCode-Package~31bf3856ad364e35",
+    "Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35",
+    "Microsoft-Windows-Wallpaper-Content-Extended-FoD-Package~31bf3856ad364e35",
+    "Microsoft-Windows-WordPad-FoD-Package~",
+    "Microsoft-Windows-TabletPCMath-Package~",
+    "Microsoft-Windows-StepsRecorder-Package~"
 )
 
-# Use NTLite to remove other packages!
+# Use NTLite to remove packages! it's safer.
 
 # Get all packages
 $allPackages = & 'DISM' /English /Image:"$($ScratchDisk)\scratchdir" /Get-Packages /Format:Table
